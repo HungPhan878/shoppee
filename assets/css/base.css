@@ -1,0 +1,182 @@
+:root{
+    --primary-color:#ee4d2d;
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --border-color:#dbdbdb;
+
+    --header-height: 120px;
+    --header-navbar-h:34px;
+    --header-search-h: calc(var(--header-height) - var(--header-navbar-h));
+    --height-sort:46px;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+/* 
+xac dinh :
+1.vi tri html;
+2.vitri Css;
+3.kich thuoc
+4.mau sac
+5.hieu ung
+*/
+
+/* common */
+.mt-4{
+    margin-top: 4px;
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+
+.mt-32{
+    margin-top: 32px;
+}
+
+.mt-64{
+    margin-top: 64px;
+}
+
+.strong{
+    font-weight: 500 !important;
+}
+.separate::after{
+content: "";
+display: block;
+position: absolute;
+height: 16px;
+/* border-left: 1px solid #f97468; */
+border-left: 1px solid white;
+right: -9px;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.no-hover{
+    cursor: text;
+    color: var(--white-color);
+}
+
+.no-border{
+    border: none !important;
+}
+
+.text{
+    text-align: center;
+}
+
+.viewed{
+    background-color: rgba(253, 228, 222, 0.3) !important;
+    /* opacity: 0.2; */
+}
+
+/* key frame */
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes growth2 {
+    from{
+         transform: scale(var(--scale-from));
+    }
+    to{
+        transform: scale(var(--scale-to));
+
+    }
+}
+/* button */
+
+.btn{
+text-decoration: none;
+min-width: 142px;
+height: 36px;
+font-size: 1.5rem;
+line-height: 1.6rem;
+padding: 0 12px;
+color: var(--text-color);
+border: none;
+border-radius: 2px;
+outline: none;
+cursor: pointer;
+display: inline-flex;
+justify-content:center;
+align-items: center;
+
+}
+
+.btn.btn--hover:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.btn.size-s{
+    height: 32px;
+    font-size: 1.2rem;
+    padding: 0 8px;
+
+}
+
+.btn.btn--primary{
+background-color: var(--primary-color);
+color: var(--white-color);
+}
+
+.btn.btn--disabled{
+    background-color: #c3c3c3;
+    color: #949494;
+    cursor: default;
+}
+
+/* pagination */
+.pagination{
+display: flex;
+align-items: center;
+justify-content: center;
+list-style-type: none;
+}
+
+.pagination-item{
+margin: 0 12px;
+}
+
+.pagination-link{
+display: block;
+--height: 30px;
+font-size: 2rem;
+font-weight: 300;
+min-width: 36px;
+text-align: center;
+height: var(--height);
+line-height: var(--height);
+color: #939393;
+border-radius: 2px;
+text-decoration: none;
+}
+
+.pagination-link--active .pagination-link{
+color: var(--white-color);    
+background-color: var(--primary-color);
+}
+
+.pagination-link--active .pagination-link:hover{
+    background-color: #ed5c3f;
+}
